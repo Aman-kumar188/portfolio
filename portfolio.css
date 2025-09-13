@@ -1,0 +1,256 @@
+html {
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 576px) {
+    .logo {
+        font-size: 40px;
+
+    }
+
+    .linkitem {
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
+
+.logo {
+
+    font-family: 'Gill Sans';
+    box-sizing: border-box;
+    color: #7cf03d;
+    overflow: hidden;
+    border-right: 3px solid rgb(0, 26, 255);
+    border-right-style: dotted;
+    width: 0ch;
+    animation: logo 2s steps(12) infinite alternate;
+}
+
+@keyframes logo {
+    from {
+        width: 0ch;
+    }
+
+    to {
+        width: 12ch;
+    }
+}
+
+
+.linkitem {
+    font-size: 25px;
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: bold;
+
+    position: relative;
+    display: inline-block;
+    color: #7cf03d;
+    text-decoration: none;
+    padding-bottom: 3px;
+    transition: color 0.3s ease;
+}
+
+.linkitem::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #7cf03d;
+    transition: 0.6s ease;
+}
+
+.linkitem:hover {
+    cursor: pointer;
+    color: #7cf03d;
+    transform: translateY(-5px);
+}
+
+.linkitem:hover::after {
+    width: 100%;
+    transform: rotate(360deg);
+}
+
+#home {
+    font-weight: bold;
+    color: #7cf03d;
+    font-size: 25px;
+    text-transform: capitalize;
+    border-bottom: 2px solid #7cf03d;
+}
+
+.navbar-toggler {
+
+    background: url('./open.gif');
+    background-position: center;
+    background-size: cover;
+}
+
+.cv {
+
+    border-radius: 20px;
+    background-color: #7cf03d;
+    box-shadow: 1px 1px 1px 2px #7cf03d;
+    border: none;
+    padding: 5px 10px;
+
+}
+
+.cv:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: #7cf03d;
+
+}
+
+.smallicon {
+    border: 2px solid #7cf03d;
+    padding: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: 0.9s;
+}
+
+.icon {
+    color: #7cf03d;
+    z-index: -1;
+}
+
+.smallicon:hover {
+    cursor: pointer;
+    background-color: transparent;
+    border-color: blue;
+    border-top-color: #7cf03d;
+    border-left-color: #eb0909;
+    border-right-color: #eb0909;
+    border-bottom-color: #7cf03d;
+    transform: rotate(360deg);
+}
+
+.aman {
+    background: linear-gradient(135deg, #7cf03d, #3dd5f3);
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    animation: superShake 3s infinite ease-in-out;
+    box-shadow: 0 0 30px rgba(124, 240, 61, 0.5);
+    transition: all 0.3s ease;
+}
+
+.skill {
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: .7px #7cf03d;
+    transition: 0.5s;
+    animation: type 4s linear infinite;
+    animation-delay: calc(-2s*var(--i));
+}
+
+@keyframes type {
+
+    25%,
+    100% {
+        display: none;
+    }
+}
+
+@keyframes superShake {
+    0% {
+        background: linear-gradient(135deg, #7cf03d, #3dd5f3);
+        box-shadow: 0 0 30px rgba(124, 240, 61, 0.5);
+    }
+
+    25% {
+        background: linear-gradient(135deg, #ff4ecd, #7cf03d);
+        box-shadow: 0 0 40px rgba(255, 78, 205, 0.7);
+    }
+
+    50% {
+        background: linear-gradient(135deg, #3dd5f3, #ffb84e);
+        box-shadow: 0 0 50px rgba(61, 213, 243, 0.7);
+    }
+
+    75% {
+        background: linear-gradient(135deg, #ffb84e, #7cf03d);
+        box-shadow: 0 0 40px rgba(255, 184, 78, 0.7);
+    }
+
+    100% {
+        background: linear-gradient(135deg, #7cf03d, #3dd5f3);
+        box-shadow: 0 0 30px rgba(124, 240, 61, 0.5);
+    }
+}
+
+.aman:hover {
+    transform: scale(1.25) rotate(15deg);
+    box-shadow: 0 0 60px rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+}
+
+.myname {
+    background: url('./heading4.gif');
+    color: transparent;
+    -webkit-background-clip: text;
+    background-size: cover;
+    background-position: center;
+    font-weight: bold;
+    -webkit-text-stroke: transparent;
+
+
+}
+
+.line {
+    height: 3px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.myskill {
+    color: #7cf03d;
+    animation: change 2s infinite;
+    transition: 0.4s;
+}
+
+@keyframes change {
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color:#7cf03d;
+    overflow: hidden;
+    transition: 0.5s all ease;
+    box-sizing: border-box;
+}
+
+.thumbnale:hover .content {
+    top: 0;
+    cursor: pointer;
+}
+
+.thumbnale {
+    overflow: hidden;
+    position: relative;
+}
+.contactform{
+    background: rgba(255, 255, 255, 0.1);
+}
+.hovereffect:hover{
+box-shadow: #7cf03d;
+transform: translateY(-6px);
+cursor: pointer;
+transition: 0.5s;
+}
